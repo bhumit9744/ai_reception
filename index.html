@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sichuan Chinese Cuisine AI Assistant</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #1e293b
+    );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.assistant-card{
+  width:420px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:24px;
+  padding:32px;
+  text-align:center;
+  color:white;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.4);
+}
+
+.logo{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#dc2626;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  font-size:32px;
+}
+
+h1{
+  margin-top:20px;
+  font-size:28px;
+}
+
+.subtitle{
+  margin-top:12px;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+.features{
+  margin-top:24px;
+  display:grid;
+  gap:12px;
+}
+
+.feature{
+  background:rgba(255,255,255,0.05);
+  padding:12px;
+  border-radius:12px;
+}
+
+.call-note{
+  margin-top:24px;
+  color:#94a3b8;
+  font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="assistant-card">
+
+<div class="logo">🍜</div>
+
+<h1>Sichuan AI Assistant</h1>
+
+<p class="subtitle">
+Talk directly with our AI assistant for reservations,
+takeaway orders, menu recommendations and restaurant information.
+</p>
+
+<div class="features">
+<div class="feature">📅 Table Reservations</div>
+<div class="feature">🥡 Takeaway Orders</div>
+<div class="feature">🍜 Menu Recommendations</div>
+<div class="feature">📍 Directions & Timings</div>
+</div>
+
+<p class="call-note">
+Click the voice button in the bottom-right corner to start speaking.
+</p>
+
+</div>
+
+<!-- Vapi Widget -->
+
+<script
+src="https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js"
+defer
+async>
+</script>
+
+<script>
+window.addEventListener('load', () => {
+  window.vapiSDK.run({
+    apiKey: '972295c8-bcdf-466e-ad8e-83650f563f4c',
+    assistant: '9731ad15-4ba6-47d2-b925-1f5fa0d8bdfb',
+    config: {
+      position: 'bottom-right'
+    }
+  });
+});
+</script>
+
+</body>
+</html>
