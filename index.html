@@ -2,9 +2,9 @@
 
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sichuan Chinese Cuisine AI Assistant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sichuan AI Receptionist</title>
 
 <style>
 *{
@@ -16,69 +16,51 @@
 
 body{
   min-height:100vh;
-  background:
-    linear-gradient(
-      135deg,
-      #0f172a,
-      #1e293b
-    );
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
+  background:#0f172a;
+  color:white;
 }
 
-.assistant-card{
+.card{
   width:420px;
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(16px);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:24px;
-  padding:32px;
+  padding:40px;
   text-align:center;
-  color:white;
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.4);
+  background:#111827;
+  border-radius:24px;
+  border:1px solid #1f2937;
 }
 
 .logo{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  background:#dc2626;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:auto;
-  font-size:32px;
+  font-size:60px;
 }
 
 h1{
-  margin-top:20px;
-  font-size:28px;
+  margin-top:15px;
 }
 
-.subtitle{
-  margin-top:12px;
+p{
+  margin-top:10px;
   color:#cbd5e1;
   line-height:1.6;
 }
 
-.features{
-  margin-top:24px;
-  display:grid;
-  gap:12px;
-}
-
-.feature{
-  background:rgba(255,255,255,0.05);
-  padding:12px;
+button{
+  margin-top:30px;
+  width:100%;
+  padding:16px;
+  border:none;
   border-radius:12px;
+  background:#dc2626;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
 }
 
-.call-note{
-  margin-top:24px;
-  color:#94a3b8;
-  font-size:14px;
+button:hover{
+  opacity:.9;
 }
 </style>
 
@@ -86,27 +68,20 @@ h1{
 
 <body>
 
-<div class="assistant-card">
+<div class="card">
 
 <div class="logo">🍜</div>
 
 <h1>Sichuan AI Assistant</h1>
 
-<p class="subtitle">
-Talk directly with our AI assistant for reservations,
+<p>
+Talk with our AI receptionist for reservations,
 takeaway orders, menu recommendations and restaurant information.
 </p>
 
-<div class="features">
-<div class="feature">📅 Table Reservations</div>
-<div class="feature">🥡 Takeaway Orders</div>
-<div class="feature">🍜 Menu Recommendations</div>
-<div class="feature">📍 Directions & Timings</div>
-</div>
-
-<p class="call-note">
-Click the voice button in the bottom-right corner to start speaking.
-</p>
+<button id="startAssistant">
+🎤 Talk to AI Assistant
+</button>
 
 </div>
 
@@ -120,6 +95,7 @@ async>
 
 <script>
 window.addEventListener('load', () => {
+
   window.vapiSDK.run({
     apiKey: 'c961ad66-2e76-4c83-8636-e8613fa590ee',
     assistant: '9731ad15-4ba6-47d2-b925-1f5fa0d8bdfb',
@@ -127,6 +103,7 @@ window.addEventListener('load', () => {
       position: 'bottom-right'
     }
   });
+
 });
 </script>
 
